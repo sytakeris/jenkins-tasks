@@ -1,19 +1,19 @@
 #!/usr/bin/env node
 
 var screen = require("./src/gui/screen")
-var jobs = require("./src/job/jenkins-jobs");
+var tasks = require("./src/task/jenkins-tasks");
 var jenkins = require("./src/jenkins/jenkins");
 var _ = require("underscore");
 
 screen.initScreen();
-screen.promptJobSelection(jobs.getJenkinsJobList())
+screen.promptTaskSelection(tasks.getJenkinsTaskList())
   .then(answer => {
 
-    jobs.getJenkinsJobList()
-      .then(jobs => {
+    tasks.getJenkinsTaskList()
+      .then(tasks => {
 
-          var job =  _.find(jobs, item => item.jobName == answer.jobSelection);
+          var task =  _.find(tasks, item => item.taskName == answer.taskSelection);
 
-          jenkins.startJob(job);
+          jenkins.startTask(task);
       });
   });

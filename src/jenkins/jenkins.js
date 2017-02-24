@@ -3,12 +3,12 @@ const querystring = require('querystring');
 const request = require("request");
 const opn = require('opn');
 
-function startJob(job) {
-  let parsedUrl = url.parse(job.jobUrl);
-  parsedUrl.query = job.params;
+function startTask(task) {
+  let parsedUrl = url.parse(task.taskUrl);
+  parsedUrl.query = task.params;
   opn(url.format(parsedUrl));
 }
 
 module.exports = {
-  startJob: startJob
+  startTask: startTask
 }

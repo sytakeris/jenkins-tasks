@@ -11,25 +11,25 @@ function initScreen() {
   clear();
   console.log(
     chalk.yellow(
-      figlet.textSync("Jenkins-Jobs", {horizontalLayout: "full"})
+      figlet.textSync("Jenkins-Tasks", {horizontalLayout: "full"})
     )
   )
 }
 
-function selectJob(jobs) {
-  let status = new Spinner("Loading tasks");
+function selectTask(tasks) {
+  let status = new Spinner("Loading task");
 
   status.start();
 
-  return jobs
+  return tasks
   .then(result => {
     status.stop();
 
     let question =  {
         type: "list",
-        name: "jobSelection",
+        name: "taskSelection",
         message: "Select Jenkins task",
-        choices: _.map(result, item => item.jobName)
+        choices: _.map(result, item => item.taskName)
       };
 
       return inquirer.prompt([question]);
@@ -39,5 +39,5 @@ function selectJob(jobs) {
 
 module.exports = {
   initScreen: initScreen,
-  promptJobSelection: selectJob
+  promptTaskSelection: selectTask
 }

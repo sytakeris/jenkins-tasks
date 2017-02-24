@@ -5,7 +5,7 @@ const _ = require("underscore");
 var readFile = Promise.denodeify(require('fs').readFile);
 var tasks = null;
 
-function getJenkinsJobList() {
+function getJenkinsTaskList() {
   if (tasks)
     return Promise.resolve(tasks);
 
@@ -38,5 +38,5 @@ function readJSON(filename) {
 
 
 module.exports = {
-  getJenkinsJobList: getJenkinsJobList
+  getJenkinsTaskList: getJenkinsTaskList
 }
