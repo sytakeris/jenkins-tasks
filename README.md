@@ -1,5 +1,5 @@
 # jenkins-tasks
-Opens in the browser generated url to jenkins task with filled params
+Opens in the browser generated url to jenkins task with filled params or starts task immediately if jenkins credentials are supplied.
 
 To add a task. You need to create tasks folder. And add json file (**-task.json)
 
@@ -9,7 +9,13 @@ To add a task. You need to create tasks folder. And add json file (**-task.json)
   "taskName": "task name",
   "taskUrl": "url to the task",
   "params": "query param object"
+  "crediantials": {
+    "user": "user id"
+    "token": "token from jenkins"
+  }
 }
+
+credentials is optional param
 
 
 ### Use
