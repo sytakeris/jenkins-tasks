@@ -1,13 +1,13 @@
 {
-  "name": "jenkins-job-cli",
+  "name": "jenkins-task-cli",
   "version": "1.0.0",
-  "description": "Create jenkins job templates and start from console",
+  "description": "When you can't generate api token. Create jenkins task templates and start from console",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "jenkins-deploy": "./app.js"
+    "jenkins-tasks": "./app.js"
   },
   "author": "Gintaras Matulas",
   "license": "ISC",
@@ -21,7 +21,6 @@
     "minimist": "^1.2.0",
     "opn": "^4.0.2",
     "promise": "^7.1.1",
-    "request": "^2.79.0",
     "underscore": "^1.8.3"
   }
 }

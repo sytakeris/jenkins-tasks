@@ -1,6 +1,5 @@
 const url = require("url");
 const querystring = require('querystring');
-const request = require("request");
 const opn = require('opn');
 
 function startTask(task) {
