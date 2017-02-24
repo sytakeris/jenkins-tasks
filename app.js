@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var screen = require("./src/gui/screen")
 var jobs = require("./src/job/jenkins-jobs");
 var jenkins = require("./src/jenkins/jenkins");

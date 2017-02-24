@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": {
+    "jenkins-deploy": "./app.js"
+  },
   "author": "Gintaras Matulas",
   "license": "ISC",
   "dependencies": {
@@ -13,6 +16,7 @@
     "clear": "0.0.1",
     "clui": "^0.3.1",
     "figlet": "^1.2.0",
+    "glob": "^7.1.1",
     "inquirer": "^3.0.3",
     "minimist": "^1.2.0",
     "opn": "^4.0.2",
